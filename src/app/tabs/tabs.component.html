@@ -1,0 +1,12 @@
+<div>
+  <ul class="nav nav-tabs">
+    <li role="presentation" [ngClass]="{active: choosenList ==='all'}">
+      <a (click)="onChoose('all')" style="cursor: pointer" >All</a>
+    </li>
+    <li role="presentation" [ngClass]="{active: choosenList ==='Light'}" >
+      <a (click)="onChoose('Light')" style="cursor:pointer" >Light</a></li>
+    <li role="presentation" [ngClass]="{active: choosenList ==='Dark'}">
+      <a (click)="onChoose('Dark')" style="cursor:pointer" >Dark</a></li>
+  </ul>
+  <app-list [characters] ="getCharacters()" ></app-list>
+</div>
